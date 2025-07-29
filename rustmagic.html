@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Magic Leaderboard - SilentGambles</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/rustmagic.css">
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/main-logo.png" alt="SilentGambles" class="nav-logo-img">
+            </div>
+            <div class="nav-menu">
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span class="menu-text">MENU</span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rustmagic.html">Rust Magic Leaderboard</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div id="particles-js"></div>
+    
+    <main class="container">
+        <section class="rustmagic-container">
+            <div class="leaderboard-header">
+                <h1>225 Coins <img src="images/rustmagic-logo.png" alt="Rust Magic" class="title-logo"> Leaderboard</h1>
+                <p class="leaderboard-subtitle">To participate in the leaderboard, make sure to use code <strong class="code-highlight">SLNT</strong> before making a deposit and wagering.</p>
+                
+                <div class="countdown-timer">
+                    <h3>Time Remaining:</h3>
+                    <div class="timer-display">
+                        <div class="time-block">
+                            <span id="days">00</span>
+                            <span class="time-label">Days</span>
+                        </div>
+                        <div class="time-block">
+                            <span id="hours">00</span>
+                            <span class="time-label">Hours</span>
+                        </div>
+                        <div class="time-block">
+                            <span id="minutes">00</span>
+                            <span class="time-label">Minutes</span>
+                        </div>
+                        <div class="time-block">
+                            <span id="seconds">00</span>
+                            <span class="time-label">Seconds</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="leaderboard-container">
+                <table class="leaderboard-table">
+                    <thead>
+                        <tr>
+                            <th>Rank</th>
+                            <th>Username</th>
+                            <th>Wagered</th>
+                            <th>Prize</th>
+                        </tr>
+                    </thead>
+                    <tbody id="leaderboard-body">
+                        <!-- Will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="images/main-logo.png" alt="SilentGambles" class="footer-logo">
+                <p>Support the grind with code <span class="accent-1">SLNT</span></p>
+            </div>
+            <div class="footer-section">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rustmagic.html">Rust Magic Leaderboard</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Social</h4>
+                <div class="social-links">
+                    <a href="https://kick.com/silentgambles" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <img src="images/kick-logo.webp" alt="Kick" class="social-icon">
+                        <span>Kick</span>
+                    </a>
+                    <a href="https://www.youtube.com/@TSTAYSILENT" target="_blank" rel="noopener noreferrer" class="social-link">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                        </svg>
+                        <span>YouTube</span>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <div class="warning">
+                    <h4>18+</h4>
+                    <p>Gambling can be addictive. Play responsibly.</p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SilentGambles. All rights reserved. | Designed by <a href="https://discord.com/users/1261209928803287154" target="_blank" rel="noopener noreferrer">Llakadmatatag</a></p>
+        </div>
+    </footer>
+
+    <div class="live-stream-container">
+        <div class="live-stream-header">
+            <span>LIVE</span>
+            <button class="stream-toggle" aria-label="Toggle stream"></button>
+        </div>
+        <iframe 
+            src="https://player.kick.com/silentgambles" 
+            class="live-stream-iframe" 
+            allowfullscreen
+            allow="autoplay; fullscreen; picture-in-picture"
+            frameborder="0">
+        </iframe>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/particles-config.js"></script>
+    <script src="js/rustmagic.js"></script>
+</body>
+</html>
